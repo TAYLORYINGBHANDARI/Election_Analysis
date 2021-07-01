@@ -5,7 +5,7 @@ import os
 # Assign a variable for the file to load and the path.
 file_to_load = os.path.join("Resources","election_results.csv")
 # Create a filename variable to a direct or indirect path to the file.
-file_to_save = os.path.join("analysis","election_analysis.text")
+file_to_save = os.path.join("analys","election_analysis.text")
 # Using the open() function with the "w" mode we will write data to the file.
 open(file_to_save, "w")
 
@@ -45,7 +45,8 @@ with open(file_to_load) as election_data:
              candidate_votes[candidate_name] = 0
         # Add a vote to that candidate's count.
         candidate_votes[candidate_name] += 1
-        # Save the results to our text file.
+        
+# Save the results to our text file.
 with open(file_to_save, "w") as txt_file:
     # Print the final vote count to the terminal.
     election_results = (
@@ -84,13 +85,13 @@ with open(file_to_save, "w") as txt_file:
             # And, set the winning_candidate equal to the candidate's name.
             winning_candidate = candidate_name
         # Print the winning candidate's results to the terminal.    
-    winning_candidate_summary= (
+        winning_candidate_summary= (
             f"------------------------\n"
             f"Winner:{winning_candidate}\n"
             f"Winning Vote Count:{winning_count:,}\n"
             f"Winning Percentage:{winning_percentage:.1f}%\n"
             f"----------------------------\n")
-    print(winning_candidate_summary)
+        print(winning_candidate_summary)
     # Save the winning candidate's results to the text file.    
     txt_file.write(winning_candidate_summary)
   
