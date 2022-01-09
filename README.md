@@ -28,6 +28,3 @@ The winner of the election was:
 
 
 
-
-## Chanllenge Overview
-## Chanllenge Summary
